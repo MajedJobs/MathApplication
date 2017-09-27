@@ -8,7 +8,7 @@ warmWelcome[1] = " Using comments is an efficeint way to clear out the picture o
 warmWelcome[2] = " best of LUCK!!"; 
 
 for(int i=0; i<warmWelcome.lengthl; i++){
-  System.out.println(warmWelcome[i];); 
+  System.out.println(warmWelcome[i]); 
   }
   
   
