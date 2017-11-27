@@ -1,0 +1,12 @@
+public class CommonAlgorithms {
+    static int counter = 0; 
+    public CommonAlgorithms(){
+        counter++; 
+    }
+    public int getResultArray(){
+        return 0; 
+    }
+    public String toString(){
+        return " "; 
+    }
+}
