@@ -1,0 +1,9 @@
+public class Algebra {
+    static int counter = 0; 
+    public Algebra(){
+        counter++; 
+    }
+    public String toString(){
+        return " "; 
+    }
+}
