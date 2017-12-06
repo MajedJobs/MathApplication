@@ -1,0 +1,75 @@
+public class ConvClient {
+
+	public static void main(String[] args) {
+		Scanner input= new Scanner(System.in);
+		
+		String[] unitType= {"Distance", "Weight", "Currency", "Temperature"};
+		
+		//Conversion Objects
+		Distance oper1= new Distance();
+		
+		
+		System.out.println("\n|****************************************|\n");
+		System.out.println("## Welcom to the conversion facility ##");
+		System.out.println("To process conversion press \"1\",\nOtherwise press \"0\":");
+		int startChoice= input.nextInt();
+		
+		if(startChoice== 1) {
+			System.out.println("First, you have to choose the type of unit.\n"
+					+ "Enter only the first letter of the type to get into it:=>\n");
+			for(String value: unitType)
+				System.out.println(value);
+			String typeChoice= input.next();
+			
+			if(typeChoice.equalsIgnoreCase("D")) {
+				System.out.println("\n&& Great, now you are in the distance conversion field &&\n");
+				
+				System.out.println("Please, enter the input unit from the following:=>\n");
+				for(String value: oper1.units)
+					System.out.println(value);
+				oper1.setSource(input.next());
+				
+				System.out.println("\nNow, please enter the input number:=>");
+				oper1.setInput(input.nextDouble());
+			
+				if(oper1.getSource().equalsIgnoreCase("Mile"))
+					System.out.println("\nThe result value is: "+oper1.getMile(oper1.getInput()));
+				else if(oper1.getSource().equalsIgnoreCase("Km"))
+					System.out.println("\nThe result value is: "+oper1.getKilometer(oper1.getInput()));
+				else if(oper1.getSource().equalsIgnoreCase("m"))
+					System.out.println("\nThe result value is: "+oper1.getMeter(oper1.getInput()));
+				else if(oper1.getSource().equalsIgnoreCase("cm"))
+					System.out.println("\nThe result value is: "+oper1.getCentimeter(oper1.getInput()));
+				else if(oper1.getSource().equalsIgnoreCase("mm"))
+					System.out.println("\nThe result value is: "+oper1.getMilimeter(oper1.getInput()));
+				else
+					System.out.println("\nInvalid value");
+				
+			}
+			else if(typeChoice.equalsIgnoreCase("W")){
+				System.out.println("\n&& Great, now you are in the weight conversion field &&\n");
+				
+				System.out.println("Please, enter the input unit from the following:=>\n");
+
+			}
+			else if(typeChoice.equalsIgnoreCase("C")){
+				System.out.println("\n&& Great, now you are in the currency conversion field &&\n");
+
+				System.out.println("Please, enter the input unit from the following:=>\n");
+			}
+			else if(typeChoice.equalsIgnoreCase("T")){
+				System.out.println("\n&& Great, now you are in the temperture conversion field &&\n");
+
+				System.out.println("Please, enter the input unit from the following:=>\n");
+			}
+			else
+				System.out.println("Sorry, invalid value\nPlease try agin later.");
+		}
+		
+		else
+			System.out.println("Looking to see you later;\nGoodbye");
+
+	
+		
+		System.out.println("\nOperation#1:\n"+oper1.toString());
+	}
