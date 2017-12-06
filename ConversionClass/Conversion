@@ -1,4 +1,4 @@
-public class ConvSuper {
+public class Conversion {
 	
 	protected String[] units;
 	protected String source;
@@ -12,7 +12,7 @@ public class ConvSuper {
 				+ output + "]";
 	}
 	
-	public ConvSuper() {
+	public Conversion() {
 		
 	}
 
