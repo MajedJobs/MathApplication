@@ -1,2 +1,92 @@
-public class Distance extneds Conversion {
-  units = {"Meter" , "Kilometer" }; 
+public class Distance extends ConvSuper{
+	Scanner input= new Scanner(System.in);
+	
+	String[] units= {"Mile", "Km", "m", "cm", "mm"};
+
+	
+	//Methods
+	public double getMile(double inputNo) {
+		System.out.println("\nFinally, please enter the output unit from the following:=>\n");
+		for(String value: units)
+			System.out.println(value);
+		destination= input.next();
+		
+		if(destination.equalsIgnoreCase("Km"))
+			return output= inputNo*1.60934;
+		else if(destination.equalsIgnoreCase("m"))
+			return output= inputNo*1609.34;
+		else if(destination.equalsIgnoreCase("cm"))
+			return output= inputNo*160934;
+		else if(destination.equalsIgnoreCase("mm"))
+			return output= inputNo*1.609e+6;
+		else
+			return -1;
+	}
+	public double getKilometer(double inputNo) {
+		System.out.println("\nFinally, please enter the output unit from the following:=>\n");
+		for(String value: units)
+			System.out.println(value);
+		destination= input.next();
+		
+		if(destination.equalsIgnoreCase("Mile"))
+			return output= inputNo*0.621371;
+		else if(destination.equalsIgnoreCase("m"))
+			return output= inputNo*1000;
+		else if(destination.equalsIgnoreCase("cm"))
+			return output= inputNo*100000;
+		else if(destination.equalsIgnoreCase("mm"))
+			return output= inputNo*1e+6;
+		else
+			return -1;
+	}
+	public double getMeter(double inputNo) {
+		System.out.println("\nFinally, please enter the output unit from the following:=>\n");
+		for(String value: units)
+			System.out.println(value);
+		destination= input.next();
+		
+		if(destination.equalsIgnoreCase("Mile"))
+			return output= inputNo*0.000621371;
+		else if(destination.equalsIgnoreCase("Km"))
+			return output= inputNo*0.001;
+		else if(destination.equalsIgnoreCase("cm"))
+			return output= inputNo*100;
+		else if(destination.equalsIgnoreCase("mm"))
+			return output= inputNo*1000;
+		else
+			return -1;
+	}
+	public double getCentimeter(double inputNo) {
+		System.out.println("\nFinally, please enter the output unit from the following:=>\n");
+		for(String value: units)
+			System.out.println(value);
+		destination= input.next();
+		
+		if(destination.equalsIgnoreCase("Mile"))
+			return output= inputNo*6.2137e-6;
+		else if(destination.equalsIgnoreCase("Km"))
+			return output= inputNo*1e-5;
+		else if(destination.equalsIgnoreCase("m"))
+			return output= inputNo*0.01;
+		else if(destination.equalsIgnoreCase("mm"))
+			return output= inputNo*10;
+		else
+			return -1;
+	}
+	public double getMilimeter(double inputNo) {
+		System.out.println("\nFinally, please enter the output unit from the following:=>\n");
+		for(String value: units)
+			System.out.println(value);
+		destination= input.next();
+		
+		if(destination.equalsIgnoreCase("Mile"))
+			return output= inputNo*6.2137e-7;
+		else if(destination.equalsIgnoreCase("Km"))
+			return output= inputNo*1e-6;
+		else if(destination.equalsIgnoreCase("m"))
+			return output= inputNo*0.001;
+		else if(destination.equalsIgnoreCase("cm"))
+			return output= inputNo*0.1;
+		else
+			return -1;
+	}
