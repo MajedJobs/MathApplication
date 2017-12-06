@@ -1,1 +1,43 @@
+public class ConvSuper {
+	
+	protected String[] units;
+	protected String source;
+	protected double input;
+	protected String destination;
+	protected double output; 
+	
+	@Override
+	public String toString() {
+		return "ConvSuper [source=" + source + ", input=" + input + ", destination=" + destination + ", output="
+				+ output + "]";
+	}
+	
+	public ConvSuper() {
+		
+	}
+
+	public String getSource() {
+		return source;
+	}
+
+	public void setSource(String source) {
+		this.source = source;
+	}
+
+	public double getInput() {
+		return input;
+	}
+
+	public void setInput(double input) {
+		this.input = input;
+	}
+
+	public String getDestination() {
+		return destination;
+	}
+
+	public double getOutput() {
+		return output;
+	}
+}
 
