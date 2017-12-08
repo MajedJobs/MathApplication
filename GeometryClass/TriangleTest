@@ -1,0 +1,88 @@
+public class TestTriangle {
+    public static void main(String[] args) {
+        Triangle[] t = new Triangle[30]; 
+        double[] givenInformation = new double[3]; 
+        int counter = 0; 
+        Scanner input = new Scanner(System.in); 
+        double leg1 , leg2 , hyp , missingLeg , missingAngle , angle; 
+        int status; 
+        do{
+            System.out.println("Welcome to our program");
+            printInfo(); 
+            status = input.nextInt(); 
+            switch(status){
+                case 1:
+                    System.out.println("Enter the value of the two legs ");
+                    leg1 = input.nextDouble(); 
+                    leg2 = input.nextDouble(); 
+                    t[counter] = new Triangle(leg1, leg2, 0); 
+                    hyp = t[counter].getHyp(); 
+                    System.out.println("The hyp is: " + hyp );
+                    break; 
+                case 2:
+                    System.out.println("Enter the known legs ");
+                    leg1 = input.nextDouble(); 
+                    leg2 = input.nextDouble(); 
+                    if(leg1 > leg2 ){
+                        t[counter] = new Triangle(0, leg2, leg1); 
+                    }else if (leg2 > leg1){
+                        t[counter] = new Triangle(0, leg1 , leg2); 
+                    }else{
+                        System.out.println("this is can not be a right a triangle!");
+                        break; 
+                    }
+                    missingLeg  = t[counter].getMissingLeg(); 
+                    System.out.println("The missing Leg is: " + missingLeg);
+                    break; 
+                case 3:
+                    System.out.println("Enter the three sides of the triangle! ");
+                    leg1 = input.nextDouble(); 
+                    leg2 = input.nextDouble();
+                    hyp = input.nextDouble(); 
+                    t[counter] = new Triangle(leg1, leg2, hyp); 
+                    double perimeter = t[counter].getPerimeter(); 
+                    System.out.println("The perimeter of the triangle entered " + perimeter);
+                    break; 
+                case 4:
+                    System.out.println("Enter the height and the base of the triangle");
+                    leg1 = input.nextDouble(); 
+                    hyp = input.nextDouble(); 
+                    t[counter] = new Triangle(leg1, hyp); 
+                    double area = t[counter].getArea(); 
+                    System.out.println("The area of the triangle is : " + area );
+                    break; 
+                case 5:
+                    System.out.println("Enter two legs , and the angle opposite of the leg you want to find , respectively! ");
+                    givenInformation[0] = input.nextDouble(); 
+                    givenInformation[1]= input.nextDouble(); 
+                    givenInformation[2]= input.nextDouble(); 
+                    t[counter] = new Triangle(givenInformation);
+                    missingLeg = t[counter].findMissingLeg(); 
+                    System.out.println("the missing leg is: " + missingLeg);
+                    break; 
+                case 6:
+                    System.out.println("Enter a leg with the angle opposite to it \nalongside with the leg opposite of the angle you want to find ");
+                    givenInformation[0] = input.nextDouble(); 
+                    givenInformation[1] = input.nextDouble();
+                    givenInformation[2] = input.nextDouble();
+                    t[counter] = new Triangle(givenInformation); 
+                    missingAngle = t[counter].findMissingAngle(); 
+                    System.out.println("the missing angle is: " + missingAngle);
+                    break; 
+            }
+            counter++; 
+            System.out.println("Operation#" + Geometry.counter + " DONE!");
+            System.out.println("___________________________");
+        }while(status != 0 ); 
+        
+    }
+    
+    public static void printInfo(){
+        System.out.println("1- to find the hypotenuse \n"
+                + "2- to find the missing leg! \n"
+                + "3- to find the perimeter of a traingle \n"
+                + "4- to find the area of a triangle \n"
+                + "5- to find a missing leg in a non-right triangle \n"
+                + "6- to find a missing angle in a non-right traingle");
+    }
+}
