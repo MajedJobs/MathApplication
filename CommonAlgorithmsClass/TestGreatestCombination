@@ -1,0 +1,11 @@
+public class TestGreatestCombination {
+    public static void main(String[] args) {
+        int[] inputs = { 3,10,20,55}; 
+        GreatestCombination g = new GreatestCombination(inputs); 
+        int[] outputs = g.findMaximumNumber(); 
+        
+        for(int i=outputs.length-1; i>=0; i--){
+            System.out.print(outputs[i] + " ");
+        }
+    }
+}
