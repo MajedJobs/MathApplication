@@ -1,0 +1,76 @@
+public class Triangle extends Geometry {
+    private double leg1,leg2,leg3;
+    private double hyp; 
+    private double missingLeg , missingAngle; 
+    //private char choice; 
+    private double[] givenInformation; 
+    
+    // the 1st constructor , to calculate the missing leg
+    public Triangle (double leg1  , double leg2 , double hyp ){
+        this.leg1 = leg1; 
+        this.leg2 = leg2; 
+        this.hyp = hyp; 
+    }
+    
+    // the 2nd constructor , to to apply sine or cosine laws 
+             // cosine laws for finding the leg of a non-right triangle 
+             // sine laws for finding the angle of a non-right triangle 
+    public Triangle(double[] givenInformation){
+        this.givenInformation = givenInformation;  
+    }
+    
+    // the 3rd constructor to find the area of a triangle 
+    public Triangle(double leg1 , double hyp ){
+        this.leg1 = leg1; 
+        this.hyp = hyp; 
+    }
+    
+    // the end of the constructor section 
+    
+    
+    // to find the missing leg - either the hypotenuse or a regular leg - using the pythagorean theorem 
+    public double getHyp(){
+        double preResult = ( Math.pow(leg1,2) + Math.pow(leg2, 2)); 
+        double result = Math.sqrt(preResult); 
+        System.out.println(result);
+        return result; 
+    }
+    
+    public double getMissingLeg(){
+        double result = 0; 
+        result = ( Math.pow(hyp, 2) - Math.pow(leg2, 2)); 
+        return  (Math.sqrt(result)); 
+    }
+    
+    public double getPerimeter(){
+        return (leg1 + leg2 + hyp); 
+    }
+    
+    @Override
+    public double getArea(){
+        return ((leg1 * hyp ) / 2);
+    }
+    
+    public double findMissingLeg(){
+        double a = givenInformation[0]; // the leg a 
+        double b = givenInformation[1]; // the leg b 
+        double C = givenInformation[2]; // the Angle C  
+        // we want to find c 
+        C = C * (Math.PI / 180); 
+        missingLeg = Math.pow(a, 2) + Math.pow(b, 2); 
+        missingLeg -= (2*a*b)*Math.cos(C); 
+        return Math.sqrt(missingLeg); 
+    }
+    
+    public double findMissingAngle(){
+        double b = givenInformation[0]; // the leg b 
+        double B = givenInformation[1]; // the angle b 
+        double a = givenInformation[2]; // the leg a
+        // we want to find A 
+        B = B * (Math.PI / 180); 
+        missingAngle = (Math.sin(B) * a ) / b; 
+        missingAngle = Math.asin(missingAngle);
+        missingAngle = missingAngle * (180 / Math.PI); 
+        return missingAngle; 
+    }
+}
