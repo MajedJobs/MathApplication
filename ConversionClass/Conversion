@@ -1,6 +1,5 @@
-public class Conversion {
+public class ConvSuper {
 	
-	protected String[] units;
 	protected String source;
 	protected double input;
 	protected String destination;
@@ -12,7 +11,7 @@ public class Conversion {
 				+ output + "]";
 	}
 	
-	public Conversion() {
+	public ConvSuper() {
 		
 	}
 
@@ -40,4 +39,3 @@ public class Conversion {
 		return output;
 	}
 }
-
