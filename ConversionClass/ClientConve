@@ -33,15 +33,15 @@ public class ConvClient {
 				oper1.setInput(input.nextDouble());
 			
 				if(oper1.getSource().equalsIgnoreCase("Mile"))
-					System.out.println("\nThe result value is: "+oper1.getMile(oper1.getInput()));
+					System.out.println("\nThe result value is: "+oper1.convMile(oper1.getInput()));
 				else if(oper1.getSource().equalsIgnoreCase("Km"))
-					System.out.println("\nThe result value is: "+oper1.getKilometer(oper1.getInput()));
+					System.out.println("\nThe result value is: "+oper1.convKilometer(oper1.getInput()));
 				else if(oper1.getSource().equalsIgnoreCase("m"))
-					System.out.println("\nThe result value is: "+oper1.getMeter(oper1.getInput()));
+					System.out.println("\nThe result value is: "+oper1.convMeter(oper1.getInput()));
 				else if(oper1.getSource().equalsIgnoreCase("cm"))
-					System.out.println("\nThe result value is: "+oper1.getCentimeter(oper1.getInput()));
+					System.out.println("\nThe result value is: "+oper1.convCentimeter(oper1.getInput()));
 				else if(oper1.getSource().equalsIgnoreCase("mm"))
-					System.out.println("\nThe result value is: "+oper1.getMilimeter(oper1.getInput()));
+					System.out.println("\nThe result value is: "+oper1.convMilimeter(oper1.getInput()));
 				else
 					System.out.println("\nInvalid value");
 				
@@ -73,3 +73,4 @@ public class ConvClient {
 		
 		System.out.println("\nOperation#1:\n"+oper1.toString());
 	}
+}
