@@ -5,7 +5,7 @@ public class Distance extends ConvSuper{
 
 	
 	//Methods
-	public double getMile(double inputNo) {
+	public double convMile(double inputNo) {
 		System.out.println("\nFinally, please enter the output unit from the following:=>\n");
 		for(String value: units)
 			System.out.println(value);
@@ -22,7 +22,7 @@ public class Distance extends ConvSuper{
 		else
 			return -1;
 	}
-	public double getKilometer(double inputNo) {
+	public double convKilometer(double inputNo) {
 		System.out.println("\nFinally, please enter the output unit from the following:=>\n");
 		for(String value: units)
 			System.out.println(value);
@@ -39,7 +39,7 @@ public class Distance extends ConvSuper{
 		else
 			return -1;
 	}
-	public double getMeter(double inputNo) {
+	public double convMeter(double inputNo) {
 		System.out.println("\nFinally, please enter the output unit from the following:=>\n");
 		for(String value: units)
 			System.out.println(value);
@@ -56,7 +56,7 @@ public class Distance extends ConvSuper{
 		else
 			return -1;
 	}
-	public double getCentimeter(double inputNo) {
+	public double convCentimeter(double inputNo) {
 		System.out.println("\nFinally, please enter the output unit from the following:=>\n");
 		for(String value: units)
 			System.out.println(value);
@@ -73,7 +73,7 @@ public class Distance extends ConvSuper{
 		else
 			return -1;
 	}
-	public double getMilimeter(double inputNo) {
+	public double convMilimeter(double inputNo) {
 		System.out.println("\nFinally, please enter the output unit from the following:=>\n");
 		for(String value: units)
 			System.out.println(value);
@@ -90,3 +90,5 @@ public class Distance extends ConvSuper{
 		else
 			return -1;
 	}
+	
+}
