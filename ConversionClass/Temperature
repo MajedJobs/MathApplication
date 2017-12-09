@@ -1,0 +1,58 @@
+
+import java.util.Scanner;
+
+
+public class Temperature extends Conversion{
+Scanner input= new Scanner(System.in);
+	
+	String[] units= {"C", "F", "K"};
+
+	
+	//Methods
+	public double convCelsius(double inputNo) {
+		System.out.println("\nFinally, please enter the output unit from the following:=>\n");
+		for(String value: units)
+			System.out.println(value);
+		destination= input.next();
+		
+		if(destination.equalsIgnoreCase("F"))
+			return output= inputNo*1.8+32;
+		else if(destination.equalsIgnoreCase("K"))
+			return output= inputNo+273.15;
+		
+		
+		else
+			return -1;
+	}
+	public double convFehrenheit(double inputNo) {
+		System.out.println("\nFinally, please enter the output unit from the following:=>\n");
+		for(String value: units)
+			System.out.println(value);
+		destination= input.next();
+		
+		if(destination.equalsIgnoreCase("C"))
+			return output= (inputNo - 32)/1.8 ;
+		else if(destination.equalsIgnoreCase("K"))
+			return output= (inputNo+459.67)*0.5556;
+		
+		
+		else
+			return -1;
+	}
+	public double convKelvin(double inputNo) {
+		System.out.println("\nFinally, please enter the output unit from the following:=>\n");
+		for(String value: units)
+			System.out.println(value);
+		destination= input.next();
+		
+		if(destination.equalsIgnoreCase("C"))
+			return output= inputNo-273.15;
+		else if(destination.equalsIgnoreCase("F"))
+			return output= inputNo*1.8-459.67;
+		
+		
+		else
+			return -1;
+	}
+	
+}
