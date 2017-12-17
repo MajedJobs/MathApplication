@@ -1,0 +1,70 @@
+
+package Geometry;
+
+
+public class Rectangle extends Geometry {
+ 
+    private double width;
+    private double heigh;
+    private double perimeter;
+
+    public Rectangle() {
+        
+        
+       
+        
+    }
+
+    public double getArea() {
+        return area;
+    }
+    
+
+    public double getWidth() {
+        return width;
+    }
+
+    public double getHeigh() {
+        return heigh;
+    }
+
+    public double getPerimeter() {
+        return perimeter;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public void setHeigh(double heigh) {
+        this.heigh = heigh;
+    }
+
+    public void setPerimeter(double perimeter) {
+        this.perimeter = perimeter;
+    }
+  
+      public void setArea(double area) {
+        this.area = area;
+    }
+    
+    public  double  Area(double width , double heigh) {
+    double area;
+    area=(width*heigh);
+   
+    return area;
+}
+    
+    public double Perimeter(double width , double heigh){
+        
+        double perimeter;
+        perimeter= 2*(width+heigh);
+        
+        return perimeter;
+    }
+    
+    
+    
+    
+    
+}
