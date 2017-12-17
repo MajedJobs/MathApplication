@@ -1,0 +1,68 @@
+//import java.math.*;
+package Geometry;
+
+
+public class Circle extends Geometry {
+    
+   private double radius;
+   private double perimter;
+   private final double PI= 22.0/7.0;
+
+    public Circle() {
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public double getPerimter() {
+        return perimter;
+    }
+
+    public double getPI() {
+        return PI;
+    }
+
+    public static int getCounter() {
+        return counter;
+    }
+
+    public double getArea() {
+        return area;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    public void setPerimter(double perimter) {
+        this.perimter = perimter;
+    }
+
+    public static void setCounter(int counter) {
+        Geometry.counter = counter;
+    }
+
+    public void setArea(double area) {
+        this.area = area;
+    }
+    
+    
+    
+    
+    
+    public  double  Area(double radius) {
+    
+    radius*=radius;
+    area = radius*PI;
+    return area;
+}
+    
+    public double Perimeter(double r){
+        double perimter;
+        perimter= 2*PI*r;
+        return perimter;
+    }
+    
+    
+}
