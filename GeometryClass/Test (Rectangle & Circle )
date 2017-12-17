@@ -1,0 +1,113 @@
+
+package Geometry;
+
+import java.util.Scanner;
+
+
+public class Test {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int num;
+        Rectangle rec1 = new Rectangle();
+        Circle cir1 = new Circle();
+        
+        System.out.println("Press... ");
+        System.out.println("1- Circle");
+        System.out.println("2- Rectangle");
+        
+        num = input.nextInt();
+        
+        if (num == 1){
+         
+            System.out.println("1- Area");
+        System.out.println("2- Perimeter");
+        num = input.nextInt();
+        
+        
+        
+        
+        if (num == 1){
+         double r;
+         
+            System.out.println("Enter the Radius : ");
+            r = input.nextDouble();
+            
+            System.out.println(cir1.Area(r));
+            
+            
+        }
+        
+        else if (num == 2){
+            double r;
+            
+            System.out.println("Enter the Radius : ");
+            r = input.nextDouble();
+            
+            System.out.println(cir1.Perimeter(r));
+            
+        }
+        
+        else {
+        System.out.println("Not valid");
+        }
+          
+        }
+        
+        
+        
+        
+        //-------------------------------
+        
+        else if (num == 2){
+        System.out.println("1- Area");
+        System.out.println("2- Perimeter");
+        num = input.nextInt();
+        
+        if (num == 1){
+            double x;
+            double y;
+            System.out.println("Enter the Width");
+            x  = input.nextDouble();
+            System.out.println("Enter the Heigh");
+            y = input.nextDouble();
+            
+            System.out.println(rec1.Area(x, y));
+        }
+        
+        else if (num == 2){
+            double x;
+            double y;
+            System.out.println("Enter the Width");
+            x  = input.nextDouble();
+            System.out.println("Enter the Heigh");
+            y = input.nextDouble();
+            
+            System.out.println(rec1.Perimeter(x, y));
+            
+        }
+        
+        else {
+            System.out.println("Not valid");
+        }
+        
+        
+        
+        }
+        
+        
+        
+        
+        //------------------------------------
+        
+        
+        
+        
+        else {
+            System.out.println("Not valid");
+        }
+        
+        
+    }
+    
+}
